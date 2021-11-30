@@ -7,7 +7,14 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "skipTests": true,
+          "style": "scss",
+          "displayBlock": true,
+          "changeDetection": "OnPush",
+          "export": true
+        },
+        "@schematics/angular:module": {
+          "routing": true
         },
         "@schematics/angular:application": {
           "strict": true
@@ -31,6 +38,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -99,6 +107,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
